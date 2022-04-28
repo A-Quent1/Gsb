@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MajEchantillon">
+
+    <TextView
+        android:id="@+id/tv_maj_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maj d'un échantillon !"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_maj_code"
+        app:layout_constraintVertical_bias="0.598" />
+
+    <EditText
+        android:id="@+id/et_maj_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Saisir un code"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_maj_quantite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_maj_titre" />
+
+    <EditText
+        android:id="@+id/et_maj_quantite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Saisir une quantité"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_maj_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_maj_code" />
+
+    <LinearLayout
+        android:id="@+id/ll_maj_buttons"
+        android:layout_width="409dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/b_maj_quitter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_maj_quantite">
+
+        <Button
+            android:id="@+id/b_maj_ajouter"
+            android:layout_width="159dp"
+            android:layout_height="48dp"
+            android:text="Ajouter" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/b_maj_supprimer"
+            android:layout_width="159dp"
+            android:layout_height="48dp"
+            android:text="Supprimer" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/b_maj_quitter"
+        android:layout_width="345dp"
+        android:layout_height="54dp"
+        android:text="Quitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_maj_buttons" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
